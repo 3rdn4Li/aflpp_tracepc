@@ -2062,8 +2062,7 @@ int main(int argc, char **argv, char **envp) {
      native LLVM PCGUARD */
   if (compiler_mode == CLANG &&
       (instrument_mode == INSTRUMENT_DEFAULT ||
-       instrument_mode == INSTRUMENT_PCGUARD) &&
-      find_object("SanitizerCoveragePCGUARD.so", argv[0]) == NULL) {
+       instrument_mode == INSTRUMENT_PCGUARD) {
 
     instrument_mode = INSTRUMENT_LLVMNATIVE;
 
